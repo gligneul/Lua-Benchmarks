@@ -12,7 +12,7 @@ Kernel: 2.6.32-642.13.1.el6.x86_64
 CPU:    Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz
 ```
 
-!(https://github.com/gligneul/Lua-Benchmarks/blob/master/results/speedup_luajit.png)
+![](https://raw.githubusercontent.com/gligneul/Lua-Benchmarks/master/results/speedup_luajit.png)
 
 ## Usage
 
