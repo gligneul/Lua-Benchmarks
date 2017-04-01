@@ -4,7 +4,7 @@ Compare the performance of different Lua implementations
 
 ## Usage
 
-´´´
+```
 usage: lua runbenchmarks.lua [options]
 options:
     --nruns <n>      number of times that each test is executed (default = 3)
@@ -14,5 +14,5 @@ options:
     --speedup        compute the speedup based on the first binary
     --no-plot        don't create the plot with gnuplot
     --help           show this message
-´´´
+```
 
