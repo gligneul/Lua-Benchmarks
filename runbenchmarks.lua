@@ -12,6 +12,7 @@ local binaries = {
 local tests_root = './'
 local tests = {
     { 'ack', 'ack.lua 3 10' },
+--[[
     { 'fixpoint-fact', 'fixpoint-fact.lua 3000' },
     { 'heapsort', 'heapsort.lua 10 250000' },
     { 'mandelbrot', 'mandel.lua' },
@@ -25,6 +26,7 @@ local tests = {
     { 'k-nucleotide', 'k-nucleotide.lua < fasta2500000.txt' },
     { 'regex-dna', 'regex-dna.lua < fasta2500000.txt' },
     { 'spectral-norm', 'spectral-norm.lua 2000' },
+--]]
 }
 
 -- Command line arguments ------------------------------------------------------
@@ -146,10 +148,19 @@ end
 local function process_results(results, f)
     for _, line in ipairs(results) do
         local base = line[1]
-        for i = 1, #line do
+        for i = 1, #binaries do
             line[i] = f(line[i], base)
         end
     end
+end
+
+-- Print info about the host computer
+local function computer_info()
+    os.execute([[
+echo "Distro: "`cat /etc/*-release | head -1`
+echo "Kernel: "`uname -r`
+echo "CPU:    "`cat /proc/cpuinfo | grep 'model name' | tail -1 | \
+                sed 's/model name.*:.//'`]])
 end
 
 -- Creates and saves the gnuplot data file
@@ -186,12 +197,15 @@ end
 
 local function main()
     parse_args()
+    computer_info()
     setup()
     local results = run_all()
     teardown()
     local function f(v, base)
-        if v == nil then
+        if not v then
             return 0
+        elseif not base then
+            return v
         elseif speedup then
             return base / v
         elseif normalize then
