@@ -1,0 +1,69 @@
+Distro: CentOS release 6.8 (Final)
+Kernel: 2.6.32-642.13.1.el6.x86_64
+CPU:    Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz
+running "lua-5.3.0 ./ack.lua 3 10"... done
+running "lua-5.3.1 ./ack.lua 3 10"... done
+running "lua-5.3.2 ./ack.lua 3 10"... done
+running "lua-5.3.3 ./ack.lua 3 10"... done
+running "lua ./ack.lua 3 10"... done
+running "lua-5.3.0 ./fixpoint-fact.lua 3000"... done
+running "lua-5.3.1 ./fixpoint-fact.lua 3000"... done
+running "lua-5.3.2 ./fixpoint-fact.lua 3000"... done
+running "lua-5.3.3 ./fixpoint-fact.lua 3000"... done
+running "lua ./fixpoint-fact.lua 3000"... done
+running "lua-5.3.0 ./heapsort.lua 10 250000"... done
+running "lua-5.3.1 ./heapsort.lua 10 250000"... done
+running "lua-5.3.2 ./heapsort.lua 10 250000"... done
+running "lua-5.3.3 ./heapsort.lua 10 250000"... done
+running "lua ./heapsort.lua 10 250000"... done
+running "lua-5.3.0 ./mandel.lua"... done
+running "lua-5.3.1 ./mandel.lua"... done
+running "lua-5.3.2 ./mandel.lua"... done
+running "lua-5.3.3 ./mandel.lua"... done
+running "lua ./mandel.lua"... done
+running "lua-5.3.0 ./qt.lua"... done
+running "lua-5.3.1 ./qt.lua"... done
+running "lua-5.3.2 ./qt.lua"... done
+running "lua-5.3.3 ./qt.lua"... done
+running "lua ./qt.lua"... done
+running "lua-5.3.0 ./queen.lua 12"... done
+running "lua-5.3.1 ./queen.lua 12"... done
+running "lua-5.3.2 ./queen.lua 12"... done
+running "lua-5.3.3 ./queen.lua 12"... done
+running "lua ./queen.lua 12"... done
+running "lua-5.3.0 ./sieve.lua 5000"... done
+running "lua-5.3.1 ./sieve.lua 5000"... done
+running "lua-5.3.2 ./sieve.lua 5000"... done
+running "lua-5.3.3 ./sieve.lua 5000"... done
+running "lua ./sieve.lua 5000"... done
+running "lua-5.3.0 ./binary-trees.lua 15"... done
+running "lua-5.3.1 ./binary-trees.lua 15"... done
+running "lua-5.3.2 ./binary-trees.lua 15"... done
+running "lua-5.3.3 ./binary-trees.lua 15"... done
+running "lua ./binary-trees.lua 15"... done
+running "lua-5.3.0 ./n-body.lua 1000000"... done
+running "lua-5.3.1 ./n-body.lua 1000000"... done
+running "lua-5.3.2 ./n-body.lua 1000000"... done
+running "lua-5.3.3 ./n-body.lua 1000000"... done
+running "lua ./n-body.lua 1000000"... done
+running "lua-5.3.0 ./fannkuch-redux.lua 10"... done
+running "lua-5.3.1 ./fannkuch-redux.lua 10"... done
+running "lua-5.3.2 ./fannkuch-redux.lua 10"... done
+running "lua-5.3.3 ./fannkuch-redux.lua 10"... done
+running "lua ./fannkuch-redux.lua 10"... done
+running "lua-5.3.0 ./fasta.lua 2500000"... done
+running "lua-5.3.1 ./fasta.lua 2500000"... done
+running "lua-5.3.2 ./fasta.lua 2500000"... done
+running "lua-5.3.3 ./fasta.lua 2500000"... done
+running "lua ./fasta.lua 2500000"... done
+running "lua-5.3.0 ./k-nucleotide.lua < fasta1000000.txt"... done
+running "lua-5.3.1 ./k-nucleotide.lua < fasta1000000.txt"... done
+running "lua-5.3.2 ./k-nucleotide.lua < fasta1000000.txt"... done
+running "lua-5.3.3 ./k-nucleotide.lua < fasta1000000.txt"... done
+running "lua ./k-nucleotide.lua < fasta1000000.txt"... done
+running "lua-5.3.0 ./spectral-norm.lua 1000"... done
+running "lua-5.3.1 ./spectral-norm.lua 1000"... done
+running "lua-5.3.2 ./spectral-norm.lua 1000"... done
+running "lua-5.3.3 ./spectral-norm.lua 1000"... done
+running "lua ./spectral-norm.lua 1000"... done
+final done
