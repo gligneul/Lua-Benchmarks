@@ -81,6 +81,8 @@ local function parse_args()
         elseif arg[i] == '--help' then
             print(usage)
             os.exit()
+        else
+            parse_error('invalid argument: ' .. arg[i])
         end
         ::continue::
     end
