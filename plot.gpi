@@ -1,0 +1,19 @@
+set encoding utf8
+set terminal png size 3000,1000 font 'Helvetica,22'
+set output outfile
+
+set style data histogram
+set style histogram cluster gap 1
+set style fill solid border -1
+set xtic font "Helvetica,14"
+set boxwidth 0.9
+set grid
+
+set xlabel 'Test file'
+set ylabel 'Time elapsed'
+
+plot for[i=2:1 + nbinaries] datafile \
+    using i:xtic(1) \
+    title column \
+    ls i
+
