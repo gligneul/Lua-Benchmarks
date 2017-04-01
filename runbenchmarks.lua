@@ -12,21 +12,19 @@ local binaries = {
 local tests_root = './'
 local tests = {
     { 'ack', 'ack.lua 3 10' },
---[[
     { 'fixpoint-fact', 'fixpoint-fact.lua 3000' },
     { 'heapsort', 'heapsort.lua 10 250000' },
     { 'mandelbrot', 'mandel.lua' },
     { 'juliaset', 'qt.lua' },
     { 'queen', 'queen.lua 12' },
     { 'sieve', 'sieve.lua 5000' }, -- Sieve of Eratosthenes
-    { 'binary', 'binary-trees.lua 17' },
-    { 'n-body', 'n-body.lua 5000000' },
+    { 'binary', 'binary-trees.lua 15' },
+    { 'n-body', 'n-body.lua 1000000' },
     { 'fannkuch', 'fannkuch-redux.lua 10' },
     { 'fasta', 'fasta.lua 2500000' },
-    { 'k-nucleotide', 'k-nucleotide.lua < fasta2500000.txt' },
-    { 'regex-dna', 'regex-dna.lua < fasta2500000.txt' },
-    { 'spectral-norm', 'spectral-norm.lua 2000' },
---]]
+    { 'k-nucleotide', 'k-nucleotide.lua < fasta1000000.txt' },
+    { 'regex-dna', 'regex-dna.lua < fasta1000000.txt' },
+    { 'spectral-norm', 'spectral-norm.lua 1000' },
 }
 
 -- Command line arguments ------------------------------------------------------
@@ -188,11 +186,11 @@ local function generate_image()
 end
 
 local function setup()
-    --os.execute('luajit benchmarks/fasta.lua 2500000 > fasta2500000.txt')
+    os.execute('luajit ' .. tests_root .. 'fasta.lua 1000000 > fasta1000000.txt')
 end
 
 local function teardown()
-    --os.execute('rm fasta2500000.txt')
+    os.execute('rm fasta1000000.txt')
 end
 
 local function main()
