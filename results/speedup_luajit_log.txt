@@ -1,0 +1,43 @@
+Distro: CentOS release 6.8 (Final)
+Kernel: 2.6.32-642.13.1.el6.x86_64
+CPU:    Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz
+running "lua ./ack.lua 3 10"... done
+running "luajit -joff ./ack.lua 3 10"... done
+running "luajit ./ack.lua 3 10"... done
+running "lua ./fixpoint-fact.lua 3000"... done
+running "luajit -joff ./fixpoint-fact.lua 3000"... done
+running "luajit ./fixpoint-fact.lua 3000"... done
+running "lua ./heapsort.lua 10 250000"... done
+running "luajit -joff ./heapsort.lua 10 250000"... done
+running "luajit ./heapsort.lua 10 250000"... done
+running "lua ./mandel.lua"... done
+running "luajit -joff ./mandel.lua"... done
+running "luajit ./mandel.lua"... done
+running "lua ./qt.lua"... done
+running "luajit -joff ./qt.lua"... done
+running "luajit ./qt.lua"... done
+running "lua ./queen.lua 12"... done
+running "luajit -joff ./queen.lua 12"... done
+running "luajit ./queen.lua 12"... done
+running "lua ./sieve.lua 5000"... done
+running "luajit -joff ./sieve.lua 5000"... done
+running "luajit ./sieve.lua 5000"... done
+running "lua ./binary-trees.lua 15"... done
+running "luajit -joff ./binary-trees.lua 15"... done
+running "luajit ./binary-trees.lua 15"... done
+running "lua ./n-body.lua 1000000"... done
+running "luajit -joff ./n-body.lua 1000000"... done
+running "luajit ./n-body.lua 1000000"... done
+running "lua ./fannkuch-redux.lua 10"... done
+running "luajit -joff ./fannkuch-redux.lua 10"... done
+running "luajit ./fannkuch-redux.lua 10"... done
+running "lua ./fasta.lua 2500000"... done
+running "luajit -joff ./fasta.lua 2500000"... done
+running "luajit ./fasta.lua 2500000"... done
+running "lua ./k-nucleotide.lua < fasta1000000.txt"... done
+running "luajit -joff ./k-nucleotide.lua < fasta1000000.txt"... done
+running "luajit ./k-nucleotide.lua < fasta1000000.txt"... done
+running "lua ./spectral-norm.lua 1000"... done
+running "luajit -joff ./spectral-norm.lua 1000"... done
+running "luajit ./spectral-norm.lua 1000"... done
+final done
