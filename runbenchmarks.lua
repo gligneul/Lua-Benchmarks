@@ -4,8 +4,9 @@
 
 -- List of binaries that will be tested
 local binaries = {
-    { 'lua', 'lua' },
-    { 'luajit', 'luajit' },
+    { 'lua-5.3.4', 'lua' },
+    { 'luajit-2.0.4-interp', 'luajit -joff' },
+    { 'luajit-2.0.4', 'luajit' },
 }
 
 -- List of tests
@@ -23,7 +24,7 @@ local tests = {
     { 'fannkuch', 'fannkuch-redux.lua 10' },
     { 'fasta', 'fasta.lua 2500000' },
     { 'k-nucleotide', 'k-nucleotide.lua < fasta1000000.txt' },
-    { 'regex-dna', 'regex-dna.lua < fasta1000000.txt' },
+    --{ 'regex-dna', 'regex-dna.lua < fasta1000000.txt' },
     { 'spectral-norm', 'spectral-norm.lua 1000' },
 }
 
@@ -182,8 +183,17 @@ end
 
 -- Generates the output image with gnuplot
 local function generate_image()
+    local ylabel
+    if normalize then
+        ylabel = 'Normalized time'
+    elseif speedup then
+        ylabel = 'Speedup'
+    else
+        ylabel = 'Elapsed time'
+    end
     os.execute('gnuplot -e "datafile=\'' .. basename .. '.txt\'" ' ..
                '-e "outfile=\'' .. basename .. '.png\'" ' ..
+               '-e "ylabel=\'' .. ylabel .. '\'" ' ..
                '-e "nbinaries=' .. #binaries .. '" plot.gpi')
 end
 

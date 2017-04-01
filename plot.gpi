@@ -8,9 +8,8 @@ set style fill solid border -1
 set xtic font "Helvetica,14"
 set boxwidth 0.9
 set grid
-
-set xlabel 'Test file'
-set ylabel 'Time elapsed'
+set key bmargin center horizontal Left reverse noenhanced autotitle columnhead nobox
+set ylabel ylabel
 
 plot for[i=2:1 + nbinaries] datafile \
     using i:xtic(1) \
